@@ -12,6 +12,7 @@ def proddigit(num):
         num //= 10
     return prod
 
+# Main Function
 num = int(input("Enter the number: "))
 if(sumdigit(num) == proddigit(num)):
     print(num, "is a spy number")
