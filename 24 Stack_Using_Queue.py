@@ -11,20 +11,20 @@ class Queue:
     
     def pop(self):
         if self.is_empty():
-            print("Stack is empty")
+            print("Underflow")
         else:
             val = self.items.pop(0)
             return val
     
     def peek(self):
         if self.is_empty():
-            print("Stack is empty")
+            print("Underflow")
         else:
             return self.items[0]
     
     def display(self):
         if self.is_empty():
-            print("Stack is empty")
+            print("Underflow")
         else:
             for item in self.items:
                 print(item, end=" ")

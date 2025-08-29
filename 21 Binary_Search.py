@@ -2,10 +2,8 @@ l = [9,3,19,12,55]
 l.sort()
 
 def binary(st, end, num):
-    
     while (end >= st):
         mid = (st+end)//2
-
         if(l[mid] == num):
             return mid
         elif(l[mid] < num):

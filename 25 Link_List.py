@@ -12,12 +12,11 @@ class LinkList:
         if not self.head:
             self.head = ptr
             return
-        
-        current = self.head
-        while current.next != None:
-            current = current.next
-        
-        current.next = ptr
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+            current.next = ptr
     
     def delete_from_beg(self):
         if self.head is None:
@@ -27,16 +26,23 @@ class LinkList:
         
     def traversal(self):
         ptr = self.head
+        if not ptr:
+            print("List is already empty")
+            return
         while ptr != None:
             print(ptr.data, end=" ")
             ptr = ptr.next
         print()
 
 lst = LinkList()
-
 lst.insert(10)
 lst.insert(20)
 lst.insert(30)
-lst.delete_from_beg()
 
-lst.traversal()
+print("Original List:")
+lst.traverse()
+
+lst.delete_from_beginning()
+
+print("After deleting first node:")
+lst.traverse()
