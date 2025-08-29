@@ -1,0 +1,4 @@
+ID,Name,Department,Designation,Salary
+101,Manish Sharma,IT,Software Engineer,55000
+103,Rohit Roy,Finance,Accountant,45000
+105,Amit Patel,Marketing,Sales Executive,40000
