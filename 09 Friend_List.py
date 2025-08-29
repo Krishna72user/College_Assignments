@@ -16,16 +16,16 @@ for _ in range(n):
     value = input(f"Enter {key.split(' ')[0]}'s phone number: ")
     dic[key] = value
 
-while True:
-    print("\n--- Friend List Menu ---")
-    print("1. Display friend list")
-    print("2. Update friend list (add more)")
-    print("3. Delete a friend")
-    print("4. Update phone number")
-    print("5. Search a friend")
-    print("6. Display sorted friend list")
-    print("0. Exit\n")
-    
+print("\n--- Friend List Menu ---")
+print("1. Display friend list")
+print("2. Update friend list (add more)")
+print("3. Delete a friend")
+print("4. Update phone number")
+print("5. Search a friend")
+print("6. Display sorted friend list")
+print("0. Exit\n")
+
+while True:    
     choice = input("Enter your choice: ")
     
     match choice:
@@ -42,10 +42,18 @@ while True:
                 dic[key] = value
         case "3":
             key = input("\nEnter the name of the friend you want to delete: ")
-            del dic[key]
+            if key in dic:
+                del dic[key]
+                print(f"{key} deleted successfully.")
+            else:
+                print(f"{key} not found in the list.")
         case "4":
             key = input("\nEnter the name of the friend: ")
-            dic[key] = input(f"Enter {key.split(' ')[0]}'s phone number: ")
+            if key in dic:
+                dic[key] = input(f"Enter {key.split(' ')[0]}'s new phone number: ")
+                print(f"{key}'s phone number updated.")
+            else:
+                print(f"{key} not found in the list.")
         case "5":
             key = input("\nEnter the name of the friend you want to search: ")
             if(key in dic):
