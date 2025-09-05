@@ -1,14 +1,11 @@
-l = [0, 1]
-i = 2
-n = int(input("Enter the nth term: "))
-
-while(i<=n):
-    fibo = l[i-1] + l[i-2]
-    l.append(fibo)
-    i += 1
-
-i = 0
+n = int(input("Enter n : "))
+a,b = (0,1)
 print("\nThe Fibonacci series is: ")
-while(i < len(l)):
-    print(l[i], end=" ")
-    i += 1
+if n>=2:
+    print(a,b,end=" ")
+    for _ in range(n-2):
+        c = a+b
+        print(c,end=" ")
+        a=b
+        b=c
+else: print(0)

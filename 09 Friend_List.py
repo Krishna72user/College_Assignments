@@ -17,23 +17,19 @@ def display():
         print(f"{i}. {x}: {y}")
 
 def add_friend():
-    while True:
-        name = input("\nEnter name of the friend you want to add: ")
-        phone = int(input(f"Enter {name}'s phone number: "))
-        if name in friends:
-            print("Friend already exists")
-        else:
-            friends[name] = phone
-            break
+    name = input("\nEnter name of the friend you want to add: ")
+    phone = int(input(f"Enter {name}'s phone number: "))
+    if name in friends:
+        print("Friend already exists")
+    else:
+        friends[name] = phone
 
 def delete_friend():
-    while True:
-        name = input("\nEnter name of the friend you want to delete: ")
-        if name in friends:
-            del friends[name]
-            break
-        else:
-            print("Friend does not exists please enter a valid friend")
+    name = input("\nEnter name of the friend you want to delete: ")
+    if name in friends:
+        del friends[name]
+    else:
+        print("Friend does not exists please enter a valid friend")
 
 def modify_phone(name):
     if name in friends:

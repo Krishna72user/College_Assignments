@@ -1,8 +1,8 @@
 def series(num):
-    if(num == 0):
-        return 0
-    result = (((-1)**(num+1))*(num**2)) + series(num-1)
-    return result
+    if not num: return 0
+    val =(num-1)**2-(num)**2
+    return val + series(num-2)
+    
 
 num = int(input("Enter n: "))
 result = series(num)
